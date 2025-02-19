@@ -4,6 +4,13 @@ import { ArrowRight } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
+      title: "Face Recognition Attendance System",
+      description: "An automated attendance tracking system using facial recognition technology",
+      image: "/lovable-uploads/dcce6648-ce8e-46af-85a0-18d4b17d6feb.png",
+      tags: ["Python", "OpenCV", "Machine Learning"],
+      link: "#"
+    },
+    {
       title: "E-commerce Platform",
       description: "A full-featured online shopping platform built with React and Node.js",
       tags: ["React", "Node.js", "MongoDB"],
@@ -13,12 +20,6 @@ const Projects = () => {
       title: "Task Management App",
       description: "Collaborative task management solution with real-time updates",
       tags: ["Next.js", "Firebase", "Tailwind"],
-      link: "#"
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "Data visualization platform for business metrics",
-      tags: ["React", "D3.js", "AWS"],
       link: "#"
     }
   ];
@@ -42,7 +43,15 @@ const Projects = () => {
                 key={index}
                 className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all"
               >
-                <div className="aspect-video bg-secondary rounded-xl mb-6"></div>
+                <div className="aspect-video bg-secondary rounded-xl mb-6 overflow-hidden">
+                  {project.image && (
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
                 <div className="space-y-4">
                   <h3 className="text-xl font-semibold">{project.title}</h3>
                   <p className="text-muted-foreground">{project.description}</p>
