@@ -16,7 +16,7 @@ const Hero = () => {
           </span>
           
           <h1 className="text-4xl md:text-6xl font-bold leading-tight slide-up">
-            Hi, I'm Aniket Mahadik<br />BCA Student & Tech Enthusiast
+            Hi, I'm Aniket Mahadik<br />Web Developer
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0 slide-up" style={{ animationDelay: '0.2s' }}>
