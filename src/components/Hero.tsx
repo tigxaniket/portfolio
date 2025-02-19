@@ -16,11 +16,11 @@ const Hero = () => {
           </span>
           
           <h1 className="text-4xl md:text-6xl font-bold leading-tight slide-up">
-            Creating digital experiences<br />with passion and purpose
+            Hi, I'm Aniket Mahadik<br />BCA Student & Tech Enthusiast
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0 slide-up" style={{ animationDelay: '0.2s' }}>
-            I'm a full-stack developer focused on building beautiful interfaces & experiences
+            A passionate learner with strong technical skills and a focus on creating impactful solutions
           </p>
           
           <div className="flex flex-col md:flex-row items-center gap-4 pt-4 slide-up" style={{ animationDelay: '0.3s' }}>

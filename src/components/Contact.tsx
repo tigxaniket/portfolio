@@ -18,16 +18,18 @@ const Contact = () => {
           <div className="max-w-2xl mx-auto">
             <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
               <div className="space-y-8">
-                <p className="text-center text-muted-foreground">
-                  I'm always interested in hearing about new projects and opportunities.
-                </p>
+                <div className="text-center space-y-2">
+                  <h3 className="text-xl font-semibold">Aniket Mahadik</h3>
+                  <p className="text-muted-foreground">Pune - 411044, Maharashtra</p>
+                  <p className="text-muted-foreground">+91 9108810771</p>
+                </div>
 
                 <div className="flex justify-center gap-6">
                   {[
                     {
                       icon: <Mail className="w-5 h-5" />,
                       label: "Email",
-                      href: "mailto:your.email@example.com"
+                      href: "mailto:@gmail.com"
                     },
                     {
                       icon: <Github className="w-5 h-5" />,
@@ -53,6 +55,16 @@ const Contact = () => {
                       <span className="text-sm font-medium">{social.label}</span>
                     </a>
                   ))}
+                </div>
+
+                <div className="text-center text-muted-foreground">
+                  <p>Additional Qualifications:</p>
+                  <ul className="mt-2 space-y-2">
+                    <li>Excellent verbal and written communication skills</li>
+                    <li>Proven ability to work effectively in team environments</li>
+                    <li>Consistently reliable in meeting deadlines</li>
+                    <li>Maintain a positive outlook when faced with challenges</li>
+                  </ul>
                 </div>
               </div>
             </div>
