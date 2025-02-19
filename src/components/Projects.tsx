@@ -10,18 +10,7 @@ const Projects = () => {
       tags: ["Python", "OpenCV", "Machine Learning"],
       link: "#"
     },
-    {
-      title: "E-commerce Platform",
-      description: "A full-featured online shopping platform built with React and Node.js",
-      tags: ["React", "Node.js", "MongoDB"],
-      link: "#"
-    },
-    {
-      title: "Task Management App",
-      description: "Collaborative task management solution with real-time updates",
-      tags: ["Next.js", "Firebase", "Tailwind"],
-      link: "#"
-    }
+    
   ];
 
   return (
