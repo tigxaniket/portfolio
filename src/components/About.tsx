@@ -36,14 +36,14 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-secondary/30">
+    <section id="about" className="py-20 bg-[#F8F9FC]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="space-y-16">
           <div className="space-y-6 text-center">
-            <span className="inline-block text-sm font-medium bg-primary/5 px-4 py-2 rounded-full">
+            <span className="inline-block text-sm font-medium bg-primary/10 px-4 py-2 rounded-full text-primary">
               About Me
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Education & Skills
             </h2>
           </div>
@@ -51,27 +51,27 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Code className="w-8 h-8" />,
+                icon: <Code className="w-8 h-8 text-primary" />,
                 title: "Technical Skills",
                 description: "Proficient in programming languages and web technologies"
               },
               {
-                icon: <Briefcase className="w-8 h-8" />,
+                icon: <Briefcase className="w-8 h-8 text-primary" />,
                 title: "Analytical Abilities",
                 description: "Strong ability to think critically and identify potential issues"
               },
               {
-                icon: <Globe className="w-8 h-8" />,
+                icon: <Globe className="w-8 h-8 text-primary" />,
                 title: "Team Collaboration",
                 description: "Proven ability to work effectively in team environments"
               }
             ].map((item, index) => (
               <div
                 key={index}
-                className="group p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all"
+                className="card-hover p-8 bg-white rounded-2xl shadow-sm"
               >
                 <div className="space-y-4">
-                  <div className="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-semibold">{item.title}</h3>
@@ -81,18 +81,18 @@ const About = () => {
             ))}
           </div>
 
-          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
+          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm card-hover">
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-semibold mb-4">Education</h3>
                 <div className="space-y-4">
                   {education.map((edu, index) => (
-                    <div key={index} className="p-4 bg-secondary/30 rounded-lg">
+                    <div key={index} className="p-4 bg-[#F8F9FC] rounded-lg hover:bg-primary/5 transition-colors">
                       <h4 className="font-semibold">{edu.degree}</h4>
                       <p className="text-sm text-muted-foreground">{edu.institution}</p>
                       <div className="flex justify-between mt-2 text-sm">
                         <span>{edu.year}</span>
-                        <span className="font-medium">{edu.grade}</span>
+                        <span className="font-medium text-primary">{edu.grade}</span>
                       </div>
                     </div>
                   ))}
@@ -105,7 +105,7 @@ const About = () => {
                   {skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-4 py-2 bg-secondary rounded-full text-sm font-medium"
+                      className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium hover:bg-primary/20 transition-colors"
                     >
                       {skill}
                     </span>

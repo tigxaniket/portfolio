@@ -8,14 +8,14 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-16 gradient-bg">
       <div className="max-w-6xl mx-auto px-6 py-20">
-        <div className="space-y-6 text-center md:text-left">
-          <span className="inline-block text-sm font-medium bg-primary/5 px-4 py-2 rounded-full fade-in">
+        <div className="space-y-8 text-center md:text-left">
+          <span className="inline-block text-sm font-medium bg-primary/10 px-4 py-2 rounded-full text-primary fade-in">
             Welcome to my portfolio
           </span>
           
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight slide-up">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight slide-up bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Hi, I'm Aniket Mahadik<br />Web Developer
           </h1>
           
@@ -26,7 +26,7 @@ const Hero = () => {
           <div className="flex flex-col md:flex-row items-center gap-4 pt-4 slide-up" style={{ animationDelay: '0.3s' }}>
             <button
               onClick={scrollToProjects}
-              className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full transition-all hover:bg-primary/90"
+              className="group inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full transition-all hover:bg-primary/90 hover:shadow-lg"
             >
               View My Work
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />

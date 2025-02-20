@@ -10,18 +10,29 @@ const Projects = () => {
       tags: ["Python", "OpenCV", "Machine Learning"],
       link: "#"
     },
-    
+    {
+      title: "E-commerce Platform",
+      description: "A full-featured online shopping platform built with React and Node.js",
+      tags: ["React", "Node.js", "MongoDB"],
+      link: "#"
+    },
+    {
+      title: "Task Management App",
+      description: "Collaborative task management solution with real-time updates",
+      tags: ["Next.js", "Firebase", "Tailwind"],
+      link: "#"
+    }
   ];
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20 gradient-bg">
       <div className="max-w-6xl mx-auto px-6">
         <div className="space-y-16">
           <div className="space-y-6 text-center">
-            <span className="inline-block text-sm font-medium bg-primary/5 px-4 py-2 rounded-full">
+            <span className="inline-block text-sm font-medium bg-primary/10 px-4 py-2 rounded-full text-primary">
               Projects
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Featured Work
             </h2>
           </div>
@@ -30,9 +41,9 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all"
+                className="card-hover bg-white rounded-2xl p-6"
               >
-                <div className="aspect-video bg-secondary rounded-xl mb-6 overflow-hidden">
+                <div className="aspect-video bg-[#F8F9FC] rounded-xl mb-6 overflow-hidden">
                   {project.image && (
                     <img 
                       src={project.image} 
@@ -48,7 +59,7 @@ const Projects = () => {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 bg-secondary rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
                       >
                         {tag}
                       </span>
@@ -56,7 +67,7 @@ const Projects = () => {
                   </div>
                   <a
                     href={project.link}
-                    className="inline-flex items-center gap-2 text-primary hover:underline mt-4"
+                    className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors mt-4"
                   >
                     View Project
                     <ArrowRight size={16} />
