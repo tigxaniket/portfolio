@@ -34,12 +34,13 @@ const Contact = () => {
                       icon: <Mail className="w-5 h-5" />,
                       label: "Email",
                       href: "mailto:tigxaniket@gmail.com",
+>>>>>>> 33f250b63cb3daf071fa550695b590fb43a4c7f9
                       color: "#9b87f5"
                     },
                     {
                       icon: <Github className="w-5 h-5" />,
                       label: "GitHub",
-                      href: "https://github.com",
+                      href: "https://github.com/tigxaniket",
                       color: "#333333"
                     },
                     {

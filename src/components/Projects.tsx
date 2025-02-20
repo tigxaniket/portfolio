@@ -9,16 +9,6 @@ const Projects = () => {
       image: "/lovable-uploads/dcce6648-ce8e-46af-85a0-18d4b17d6feb.png",
       tags: ["Python", "OpenCV", "Machine Learning"]
     },
-    {
-      title: "E-commerce Platform",
-      description: "A full-featured online shopping platform with real-time inventory management, secure payments, and responsive design for optimal user experience.",
-      tags: ["React", "Node.js", "MongoDB"]
-    },
-    {
-      title: "Task Management App",
-      description: "Modern task management solution featuring real-time updates, team collaboration tools, and intuitive project organization capabilities.",
-      tags: ["Next.js", "Firebase", "Tailwind"]
-    }
   ];
 
   return (
