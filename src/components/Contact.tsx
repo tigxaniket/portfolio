@@ -1,7 +1,11 @@
 
-import { Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, Linkedin, Download, Download as WhatsApp } from 'lucide-react';
 
 const Contact = () => {
+  const whatsappNumber = "+919108810771"; // Replace with your WhatsApp number
+  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+  const cvUrl = "/lovable-uploads/resume.pdf"; // This path will need to be updated once you upload your CV
+
   return (
     <section id="contact" className="py-20 bg-secondary/30">
       <div className="max-w-6xl mx-auto px-6">
@@ -40,6 +44,11 @@ const Contact = () => {
                       icon: <Linkedin className="w-5 h-5" />,
                       label: "LinkedIn",
                       href: "https://linkedin.com"
+                    },
+                    {
+                      icon: <WhatsApp className="w-5 h-5" />,
+                      label: "WhatsApp",
+                      href: whatsappLink
                     }
                   ].map((social) => (
                     <a
@@ -55,6 +64,17 @@ const Contact = () => {
                       <span className="text-sm font-medium">{social.label}</span>
                     </a>
                   ))}
+                </div>
+
+                <div className="flex justify-center">
+                  <a
+                    href={cvUrl}
+                    download="Aniket_Mahadik_CV.pdf"
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full hover:bg-primary/90 transition-colors"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download CV
+                  </a>
                 </div>
 
                 <div className="text-center text-muted-foreground">
