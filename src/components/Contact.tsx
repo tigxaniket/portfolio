@@ -4,7 +4,7 @@ import { Mail, Github, Linkedin, Download, MessageCircle } from 'lucide-react';
 const Contact = () => {
   const whatsappNumber = "+919108810771";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
-  const cvUrl = "/lovable-uploads/resume.pdf";
+  const cvUrl = "/lovable-uploads/2e876001-cc9b-4d15-b08f-8419f6ca938d.png";
 
   return (
     <section id="contact" className="py-20 bg-[#F6F6F7]">
@@ -33,7 +33,7 @@ const Contact = () => {
                     {
                       icon: <Mail className="w-5 h-5" />,
                       label: "Email",
-                      href: "mailto:@gmail.com",
+                      href: "mailto:tigxaniket@gmail.com",
                       color: "#9b87f5"
                     },
                     {
@@ -45,7 +45,7 @@ const Contact = () => {
                     {
                       icon: <Linkedin className="w-5 h-5" />,
                       label: "LinkedIn",
-                      href: "https://linkedin.com",
+                      href: "https://www.linkedin.com/in/aniket-mahadik-84aa10221?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
                       color: "#0077B5"
                     },
                     {
@@ -76,7 +76,7 @@ const Contact = () => {
                 <div className="flex justify-center">
                   <a
                     href={cvUrl}
-                    download="Aniket_Mahadik_CV.pdf"
+                    download="aniket_mahadik_cv.png"
                     className="inline-flex items-center gap-2 bg-[#9b87f5] text-white px-6 py-3 rounded-full hover:bg-[#7E69AB] transition-colors"
                   >
                     <Download className="w-4 h-4" />
