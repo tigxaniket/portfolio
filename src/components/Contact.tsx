@@ -1,31 +1,31 @@
 
-import { Mail, Github, Linkedin, Download, Download as WhatsApp } from 'lucide-react';
+import { Mail, Github, Linkedin, Download, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
-  const whatsappNumber = "+919108810771"; // Replace with your WhatsApp number
+  const whatsappNumber = "+919108810771";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
-  const cvUrl = "/lovable-uploads/resume.pdf"; // This path will need to be updated once you upload your CV
+  const cvUrl = "/lovable-uploads/resume.pdf";
 
   return (
-    <section id="contact" className="py-20 bg-secondary/30">
+    <section id="contact" className="py-20 bg-[#F6F6F7]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="space-y-16">
           <div className="space-y-6 text-center">
-            <span className="inline-block text-sm font-medium bg-primary/5 px-4 py-2 rounded-full">
+            <span className="inline-block text-sm font-medium bg-[#9b87f5]/10 px-4 py-2 rounded-full text-[#7E69AB]">
               Contact
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#222222]">
               Let's Work Together
             </h2>
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
+            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.08)]">
               <div className="space-y-8">
                 <div className="text-center space-y-2">
-                  <h3 className="text-xl font-semibold">Aniket Mahadik</h3>
-                  <p className="text-muted-foreground">Pune - 411044, Maharashtra</p>
-                  <p className="text-muted-foreground">+91 9108810771</p>
+                  <h3 className="text-xl font-semibold text-[#222222]">Aniket Mahadik</h3>
+                  <p className="text-[#555555]">Pune - 411044, Maharashtra</p>
+                  <p className="text-[#555555]">+91 9108810771</p>
                 </div>
 
                 <div className="flex justify-center gap-6">
@@ -33,22 +33,26 @@ const Contact = () => {
                     {
                       icon: <Mail className="w-5 h-5" />,
                       label: "Email",
-                      href: "mailto:@gmail.com"
+                      href: "mailto:@gmail.com",
+                      color: "#9b87f5"
                     },
                     {
                       icon: <Github className="w-5 h-5" />,
                       label: "GitHub",
-                      href: "https://github.com"
+                      href: "https://github.com",
+                      color: "#333333"
                     },
                     {
                       icon: <Linkedin className="w-5 h-5" />,
                       label: "LinkedIn",
-                      href: "https://linkedin.com"
+                      href: "https://linkedin.com",
+                      color: "#0077B5"
                     },
                     {
-                      icon: <WhatsApp className="w-5 h-5" />,
+                      icon: <MessageCircle className="w-5 h-5" />,
                       label: "WhatsApp",
-                      href: whatsappLink
+                      href: whatsappLink,
+                      color: "#25D366"
                     }
                   ].map((social) => (
                     <a
@@ -58,10 +62,13 @@ const Contact = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary/5 transition-colors">
+                      <div 
+                        className="w-12 h-12 rounded-full bg-[#F1F1F1] flex items-center justify-center transition-colors"
+                        style={{ color: social.color }}
+                      >
                         {social.icon}
                       </div>
-                      <span className="text-sm font-medium">{social.label}</span>
+                      <span className="text-sm font-medium text-[#333333]">{social.label}</span>
                     </a>
                   ))}
                 </div>
@@ -70,14 +77,14 @@ const Contact = () => {
                   <a
                     href={cvUrl}
                     download="Aniket_Mahadik_CV.pdf"
-                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full hover:bg-primary/90 transition-colors"
+                    className="inline-flex items-center gap-2 bg-[#9b87f5] text-white px-6 py-3 rounded-full hover:bg-[#7E69AB] transition-colors"
                   >
                     <Download className="w-4 h-4" />
                     Download CV
                   </a>
                 </div>
 
-                <div className="text-center text-muted-foreground">
+                <div className="text-center text-[#555555]">
                   <p>Additional Qualifications:</p>
                   <ul className="mt-2 space-y-2">
                     <li>Excellent verbal and written communication skills</li>
