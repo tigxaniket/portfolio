@@ -46,7 +46,7 @@ const TicTacToe = () => {
 
   const renderSquare = (i: number) => (
     <button
-      className="w-16 h-16 bg-[#333333] border border-[#E50914]/20 rounded-lg text-2xl font-bold flex items-center justify-center transition-all hover:bg-[#E50914]/20"
+      className="w-10 h-10 bg-[#333333] border border-[#E50914]/20 rounded-md text-lg font-bold flex items-center justify-center transition-all hover:bg-[#E50914]/20"
       onClick={() => handleClick(i)}
     >
       <span className={board[i] === 'X' ? 'text-[#E50914]' : 'text-white'}>
@@ -63,16 +63,16 @@ const TicTacToe = () => {
     : `Next player: ${isXNext ? 'X' : 'O'}`;
 
   return (
-    <div className="flex flex-col items-center gap-4 p-8 glass-card rounded-xl">
-      <h3 className="text-xl font-semibold text-white/90">{status}</h3>
-      <div className="grid grid-cols-3 gap-2">
+    <div className="flex flex-col items-center gap-2 p-4 glass-card rounded-xl">
+      <h3 className="text-sm font-semibold text-white/90">{status}</h3>
+      <div className="grid grid-cols-3 gap-1">
         {Array(9).fill(null).map((_, i) => (
           <div key={i}>{renderSquare(i)}</div>
         ))}
       </div>
       <button
         onClick={resetGame}
-        className="mt-4 px-6 py-2 netflix-button rounded-lg transition-all text-lg"
+        className="mt-2 px-4 py-1 netflix-button rounded text-sm"
       >
         Reset Game
       </button>
