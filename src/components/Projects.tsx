@@ -9,11 +9,9 @@ const Projects = () => {
       description: "An automated attendance tracking system using facial recognition technology. Built with Python and OpenCV for accurate face detection and recognition.",
       image: "/lovable-uploads/dcce6648-ce8e-46af-85a0-18d4b17d6feb.png",
       tags: ["Python", "OpenCV", "Machine Learning"]
-    },
-    
+    }, 
   ];
-
-  return (
+ return (
     <section id="projects" className="py-20" style={{ background: 'linear-gradient(135deg, #F2FCE2 0%, #E5DEFF 100%)' }}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="space-y-16">
@@ -28,7 +26,7 @@ const Projects = () => {
 
           <div className="grid lg:grid-cols-4 gap-4">
             <div className="lg:col-span-3">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {projects.map((project, index) => (
                   <div
                     key={index}
