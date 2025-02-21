@@ -90,3 +90,20 @@
   transform: translateY(-4px);
   box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.1);
 }
+
+.glass-card {
+  background: rgba(51, 51, 51, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.netflix-button {
+  background: #E50914;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.netflix-button:hover {
+  background: #ff0f21;
+  transform: translateY(-2px);
+}
