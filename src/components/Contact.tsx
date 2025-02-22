@@ -1,10 +1,30 @@
 
 import { Mail, Github, Linkedin, Download, MessageCircle } from 'lucide-react';
+import { useState } from 'react';
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const whatsappNumber = "+919108810771";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
   const cvUrl = "/lovable-uploads/2e876001-cc9b-4d15-b08f-8419f6ca938d.png";
+  const { toast } = useToast();
+
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const mailtoLink = `mailto:tigxaniket@gmail.com?subject=Message from ${formData.name}&body=Name: ${formData.name}%0D%0APhone: ${formData.phone}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+    window.location.href = mailtoLink;
+    toast({
+      title: "Message Ready",
+      description: "Your email client will open with the message",
+    });
+    setFormData({ name: '', phone: '', message: '' });
+  };
 
   return (
     <section id="contact" className="py-20 bg-[#F6F6F7]">
@@ -27,6 +47,41 @@ const Contact = () => {
                   <p className="text-[#555555]">Pune - 411044, Maharashtra</p>
                   <p className="text-[#555555]">+91 9108810771</p>
                 </div>
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="space-y-4">
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9b87f5] transition-all"
+                    />
+                    <input
+                      type="tel"
+                      placeholder="Your Phone Number"
+                      required
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9b87f5] transition-all"
+                    />
+                    <textarea
+                      placeholder="Your Message"
+                      required
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      rows={4}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#9b87f5] transition-all resize-none"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-[#9b87f5] text-white px-6 py-3 rounded-lg hover:bg-[#7E69AB] transition-colors font-medium"
+                  >
+                    Send Message
+                  </button>
+                </form>
 
                 <div className="flex justify-center gap-6">
                   {[
