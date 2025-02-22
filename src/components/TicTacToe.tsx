@@ -57,6 +57,11 @@ const TicTacToe = () => {
     return availableMoves[randomIndex];
   };
 
+  const resetGame = () => {
+    setBoard(Array(9).fill(null));
+    setIsPlayerTurn(true);
+  };
+
   const handlePlayerMove = (i: number) => {
     if (!isPlayerTurn || board[i] || calculateWinner(board)) return;
     
@@ -90,10 +95,20 @@ const TicTacToe = () => {
     }
   }, [board, isPlayerTurn]);
 
-  const resetGame = () => {
-    setBoard(Array(9).fill(null));
-    setIsPlayerTurn(true);
-  };
+  // Add auto-reset effect
+  useEffect(() => {
+    const winner = calculateWinner(board);
+    const isDraw = !winner && !board.includes(null);
+    
+    if (winner || isDraw) {
+      const resetTimeout = setTimeout(() => {
+        resetGame();
+        toast("Starting new game...");
+      }, 5000);
+
+      return () => clearTimeout(resetTimeout);
+    }
+  }, [board]);
 
   const renderSquare = (i: number) => (
     <button
