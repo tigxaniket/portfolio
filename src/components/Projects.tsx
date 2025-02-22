@@ -7,7 +7,7 @@ const Projects = () => {
     {
       title: "Face Recognition Attendance System",
       description: "An automated attendance tracking system using facial recognition technology. Built with Python and OpenCV for accurate face detection and recognition.",
-      image: "/lovable-uploads/dcce6648-ce8e-46af-85a0-18d4b17d6feb.png",
+      image: "/lovable-uploads/2c14526b-3508-4d10-95e0-1f8aaef1fb12.png",
       tags: ["Python", "OpenCV", "Machine Learning"]
     }, 
   ];
