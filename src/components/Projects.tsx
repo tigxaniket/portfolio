@@ -32,7 +32,7 @@ const Projects = () => {
                   <img 
                     src={projects[0].image} 
                     alt={projects[0].title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-full object-contain object-center"
                   />
                 )}
               </div>
