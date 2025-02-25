@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <span className="text-lg font-semibold text-foreground">Portfolio</span>
           
-          <div className="flex items-center space-x-4 sm:space-x-6">
+          <div className="flex items-center space-x-3 sm:space-x-6">
             {['home', 'about', 'projects', 'contact'].map((item) => (
               <button
                 key={item}
@@ -50,7 +50,8 @@ const Navbar = () => {
               </button>
             ))}
             
-            <div className="relative">
+            {/* Desktop theme toggle */}
+            <div className="relative hidden sm:block">
               <button
                 onClick={toggleTheme}
                 className={`w-16 h-8 rounded-full p-1 transition-colors duration-300 relative overflow-hidden ${
@@ -93,6 +94,23 @@ const Navbar = () => {
                 </div>
               </button>
             </div>
+
+            {/* Mobile theme toggle */}
+            <button
+              onClick={toggleTheme}
+              className={`sm:hidden w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${
+                theme === 'dark' 
+                  ? 'bg-[#1A1F2C] text-white' 
+                  : 'bg-[#FEF7CD] text-[#FF9900]'
+              }`}
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? (
+                <Moon className="w-4 h-4" />
+              ) : (
+                <Sun className="w-4 h-4" />
+              )}
+            </button>
           </div>
         </div>
       </div>
