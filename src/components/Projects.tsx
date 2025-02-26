@@ -10,14 +10,6 @@ const Projects = () => {
       image: "/lovable-uploads/2c14526b-3508-4d10-95e0-1f8aaef1fb12.png",
       tags: ["Python", "OpenCV", "Machine Learning"]
     },
-    {
-       title: "Portfolio Website",
-      description: "A full-featured online Portfolio",
-@@ -14,12 +21,6 @@ const Projects = () => {
-      description: "Enhanced user experience,Increased mobile traffic by 20%,",
-      tags: ["Typescript", "Tailwind"],
-      link: "#https://tigxaniket.netlify.app"
-    },
   ];
 
   return (
