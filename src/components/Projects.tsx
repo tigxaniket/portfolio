@@ -14,8 +14,8 @@ const Projects = () => {
        title: "Portfolio Website",
       description: "A full-featured online shopping platform built with React and Node.js",
 @@ -14,12 +21,6 @@ const Projects = () => {
-      description: "Enhanced user experience,Increased mobile traffic by 20%",
-      tags: ["Next.js", "Tailwind"],
+      description: "Enhanced user experience,Increased mobile traffic by 20%,",
+      tags: ["Typescript", "Tailwind"],
       link: "#https://tigxaniket.netlify.app"
     },
   ];
