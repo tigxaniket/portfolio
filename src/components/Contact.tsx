@@ -45,7 +45,7 @@ const Contact = () => {
                     {
                       icon: <Linkedin className="w-5 h-5" />,
                       label: "LinkedIn",
-                      href: "https://www.linkedin.com/in/aniket-mahadik-84aa10221?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                      href: "https://www.linkedin.com/in/tigxaniket",
                       color: "primary"
                     },
                     {
