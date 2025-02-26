@@ -10,6 +10,14 @@ const Projects = () => {
       image: "/lovable-uploads/2c14526b-3508-4d10-95e0-1f8aaef1fb12.png",
       tags: ["Python", "OpenCV", "Machine Learning"]
     },
+    {
+       title: "Portfolio Website",
+      description: "A full-featured online shopping platform built with React and Node.js",
+@@ -14,12 +21,6 @@ const Projects = () => {
+      description: "Enhanced user experience,Increased mobile traffic by 20%",
+      tags: ["Next.js", "Tailwind"],
+      link: "#"
+    },
   ];
 
   return (
