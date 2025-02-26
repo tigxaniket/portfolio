@@ -16,7 +16,7 @@ const Projects = () => {
 @@ -14,12 +21,6 @@ const Projects = () => {
       description: "Enhanced user experience,Increased mobile traffic by 20%",
       tags: ["Next.js", "Tailwind"],
-      link: "#"
+      link: "#https://tigxaniket.netlify.app"
     },
   ];
 
